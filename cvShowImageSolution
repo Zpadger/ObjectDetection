@@ -1,0 +1,15 @@
+conda remove opencv
+conda install -c menpo opencv
+pip install --upgrade pip
+pip install opencv-contrib-python
+
+备注：如果在卸载opencv的时候提示conda找不到包，可以直接在Pycharm中手动卸载
+
+建议：直接使用conda安装
+安装指令如下：
+conda install -c menpo opencv3
+pip install --upgrade pip
+pip install opencv-contrib-python
+
+关于opencv与opencv-contrib-python的区别：
+带contrib的是高配版，带有一些收费或者专利的算法，opencv不收费
