@@ -65,6 +65,11 @@ def max_min_filter(img, K_size=3):
 # Read image
 img = cv2.imread("imori.jpg").astype(np.float)
 
+#img = cv2.imread("imori.jpg").astype(np.float32)
+#BGR转GRAY不用自写的函数，直接调用opencv中的转换函数
+
+#gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+
 # grayscale
 gray = BGR2GRAY(img)
 
