@@ -29,8 +29,3 @@ out = his_normalization(img)
 plt.hist(out.ravel(),bins=255,rwidth=0.8,range=(0,255))#返回的是视图，可以修改out的值
 plt.savefig("out_his.png")
 plt.show()
-
-# #save result
-# cv2.imshow("result",out)
-# cv2.waitKey(0)
-# cv2.imwrite("out.jpg",out)
