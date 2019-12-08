@@ -23,19 +23,20 @@ def nn_interpolate(img, ax=1, ay=1):
 
 
 # Read image
+img_original = cv2.imread("imori.jpg")
 img = cv2.imread("imori.jpg").astype(np.float)
+cv2.imshow("imori",img_original)
+while cv2.waitKey(100) != 27:
+    if cv2.getWindowProperty('imori',cv2.WND_PROP_VISIBLE) <= 0:
+        break
 
 # Nearest Neighbor
 out = nn_interpolate(img, ax=1.5, ay=1.5)#放大1.5倍
 
 # Save result
-cv2.imshow("original_img",img) #存疑，为啥是白的？
+#cv2.imshow("imori",img) #存疑，为啥是白的？--可能是.astype(np.float)
 cv2.imshow("result", out)
 #cv2.waitKey(0)
-
-while cv2.waitKey(100) != 27:
-    if cv2.getWindowProperty('original_img',cv2.WND_PROP_VISIBLE) <= 0:
-        break
 while cv2.waitKey(100) != 27:
     if cv2.getWindowProperty('result',cv2.WND_PROP_VISIBLE) <= 0:
         break
